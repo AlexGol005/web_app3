@@ -1,8 +1,10 @@
 {% extends "main/layout.html" %}
 
 {% block content %}
-	<h2>{{header}}</h2>
-	{% for val in content %}
-		<p>{{val}}</p>
-	{% endfor %}
+	{% if info == "Header" %}
+		<!-- Если параметр равен "Header" -->
+		<h2>{{info}}</h2> <!-- Тогда показываем в заголовке -->
+	{% else %}
+		<p>{{info}}</p>
+	{% endif %}
 {% endblock %}
